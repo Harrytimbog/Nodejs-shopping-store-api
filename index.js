@@ -12,8 +12,8 @@ mongoose.connect(process.env.MONGO_URL).then(() => console.log("DB Connection Su
 });
 
 app.use(express.json());
-app.use("/api/auth", authRoute)
-app.use("/api/users", userRoute)
+app.use("/api/auth", authRoute);
+app.use("/api/users", userRoute);
 
 app.listen(process.env.PORT || 3000, () => {
   console.log("Backend server is running")
